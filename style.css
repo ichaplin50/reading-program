@@ -55,3 +55,10 @@ button:hover {
 @keyframes fadeIn {
     to { opacity: 1; }
 }
+
+.word-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}

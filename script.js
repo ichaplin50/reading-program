@@ -47,7 +47,7 @@ function showWord() {
 function revealPicture() {
     const img = document.createElement('img');
     img.src = wordList[currentIndex].image;
-    imageContainer.appendChild(img);
+    imageContainer.appendChild(img, revealButton);
 
     // Trigger confetti
     if (window.confetti) {
