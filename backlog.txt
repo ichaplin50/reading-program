@@ -1,0 +1,23 @@
+READING WORD GAME BACKLOG
+
+👌 Completed Features
+1. Add a feature to randomize the order of the words
+2. Change the Kia picture to a Kia Sol
+3. Change the Ford picture to a Ford pickup truck
+4. Add new words: cow, bat, hat
+5. Add a feature for progress tracking
+6. Get set up with Git to enable version control
+
+📌 To Do List
+1. Add a feature for voice-enabled answers
+2. Add more words
+3. Add a feature to select the number of words per session (long-term)
+4. Add a feature to find pictures automatically (long-term)
+5. Enable the game at different reading levels, selected at startup (long-term)
+6. Add a Capital Letter mode
+7. Add a lower case letter mode
+8. Add more word categories
+9. Improve the user interface
+10. Add sound effects
+12. Optimize performance
+13. Add achievements

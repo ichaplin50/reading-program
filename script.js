@@ -29,11 +29,18 @@ function shuffleArray(array) {
 shuffleArray(wordList);
 
 let currentIndex = 0;
+const totalWords = wordList.length;
 
 const wordDisplay = document.getElementById('word-display');
 const revealButton = document.getElementById('reveal-button');
 const nextButton = document.getElementById('next-button');
 const imageContainer = document.getElementById('image-container');
+const progressBar = document.getElementById('progress-bar');
+
+function updateProgressBar() {
+    const progressPercent = (currentIndex / totalWords) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+}
 
 // Function to show the current word
 function showWord() {
@@ -41,6 +48,7 @@ function showWord() {
     imageContainer.innerHTML = "";
     revealButton.style.display = "inline-block";
     nextButton.style.display = "none";
+    updateProgressBar();
 }
 
 // Function to reveal the picture
@@ -70,6 +78,7 @@ function nextWord() {
         imageContainer.innerHTML = "";
         revealButton.style.display = "none";
         nextButton.style.display = "none";
+        updateProgressBar();
     } else {
         showWord();
     }

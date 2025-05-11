@@ -1,0 +1,28 @@
+customizableSessionSizeConsiderations.txt
+
+RATIONALE: Why `wordList` Should Represent the Session Word List
+
+Overview:
+As we prepare for the future feature that allows customizable session sizes, it's important to structure our code so the transition is smooth and minimally disruptive. The current assumption is that `wordList` should represent the list of words used in the current session — not the full master list. This design choice is intentional and grounded in the following considerations:
+
+1. Cleaner Game State Management:
+   - Treating `wordList` as the session list means the main game logic (showWord, nextWord, progress tracking) only deals with the words that matter for the current run.
+   - There's no need for filtering, conditional logic, or indexing into a larger list.
+   - The game becomes easier to reason about, especially as features grow.
+
+2. Enables Custom Sessions Without Rewriting Game Logic:
+   - If we later introduce a function like `generateSession(fullWordList, options)`, we can assign the resulting subset directly to `wordList`.
+   - The rest of the game (rendering, navigation, progress tracking) remains untouched.
+   - This isolates complexity and avoids deep rewrites of existing logic.
+
+3. Better Support for Future Features:
+   - Many features in the backlog (difficulty levels, reading levels, categories, user-defined session length) will require slicing or filtering a master list.
+   - Keeping `wordList` session-specific means we won't need to repeatedly compute subsets on the fly — they can be computed once at session start.
+   - This helps avoid performance issues and logic bugs.
+
+4. Naming Conventions and Maintainability:
+   - The convention of using `fullWordList` (or `wordBank`) for the master list and `wordList` (or `sessionWords`) for the active session aligns with standard frontend design practices.
+   - It improves code readability and reduces confusion for future collaborators.
+
+Summary:
+Using `wordList` to represent the active session list — rather than the master list — keeps the game logic clean, simplifies future enhancements, and adheres to scalable software design principles. When we implement customizable session sizes, we’ll be well-prepared with this structure in place.
