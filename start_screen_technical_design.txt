@@ -1,0 +1,48 @@
+START SCREEN TECHNICAL DESIGN PROPOSAL
+
+Goal:
+Implement a welcoming start screen for the Bookaroo game that aligns with the leftmost visual mockup and fulfills the UX and technical requirements from start_screen_prd.txt.
+
+Design Overview:
+- Display a full-screen start screen when the game loads
+- Include a responsive, colorful background with a centered layout
+- Feature the “Bookaroo” title in a large, playful font with an orange outline
+- Include a prominent “Start” button underneath the title
+- Present a cartoon-style child reading a book with surrounding elements (e.g., teddy bear, ball)
+- Ensure all visual elements scale appropriately with the window size
+
+Components:
+1. HTML Structure:
+   - <div class="start-screen">
+     - <h1 class="title">Bookaroo</h1>
+     - <img src="images/child_reading.png" alt="Child Reading" class="hero-image">
+     - <button id="start-button">Start</button>
+   - </div>
+
+2. CSS Styling:
+   - Full-screen flexbox layout to center content
+   - Blue background with soft clouds or stars (CSS or image)
+   - Responsive typography and image sizing (use vw/vh units)
+   - Animated transitions for a playful feel (e.g., button hover, fade-in)
+   - Ensure contrast and readability of the title and buttons
+
+3. JavaScript Behavior:
+   - Wait for DOM to load, then display the start screen
+   - Clicking “Start” hides the start screen and initializes the game (calls showWord())
+   - Future-proof with commented placeholder logic for session configuration
+
+4. Assets:
+   - “Bookaroo” logo or styled title (may be HTML/CSS or SVG)
+   - Child reading image and background image (or gradient/background color fallback)
+   - Optional confetti or sparkles on start button click
+
+Scalability & Maintainability:
+- CSS variables for theme customization
+- Modular CSS class structure (e.g., .start-screen, .title, .hero-image)
+- Separate image assets stored in /images
+- Future session options can be added via another button or menu slideout
+
+Next Steps:
+- Confirm design direction
+- Prepare final image assets
+- Begin implementation (HTML, CSS, JS)
