@@ -9,6 +9,7 @@ body {
 .game-container {
     width: 80%;
     margin: auto;
+    z-index: 2;
 }
 
 .word {
@@ -77,4 +78,55 @@ button:hover {
     width: 0%;
     background-color: #4caf50;
     transition: width 0.3s ease;
+}
+
+#start-screen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #b3e5fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+#start-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('images/space_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+#start-title {
+    position: relative;
+    z-index: 2;
+    font-size: 64px;
+    color: #01579b;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+#start-button {
+    position: relative;
+    z-index: 2;
+    background-color: #FF7043;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 18px 36px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+#start-button:hover {
+    background-color: #F4511E;
+    transform: scale(1.08);
 }

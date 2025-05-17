@@ -1,4 +1,3 @@
-
 const wordList = [
     { word: "Cat", image: "images/cat.jpg" },
     { word: "Dog", image: "images/dog.jpg" },
@@ -38,6 +37,16 @@ const revealButton = document.getElementById('reveal-button');
 const nextButton = document.getElementById('next-button');
 const imageContainer = document.getElementById('image-container');
 const progressBar = document.getElementById('progress-bar');
+
+const startScreen = document.getElementById('start-screen');
+const startButton = document.getElementById('start-button');
+const gameContainer = document.querySelector('.game-container');
+
+startButton.addEventListener('click', function() {
+    startScreen.style.display = 'none';
+    gameContainer.style.display = 'block';
+    showWord();
+});
 
 function updateProgressBar() {
     const progressPercent = (currentIndex / totalWords) * 100;
@@ -89,6 +98,3 @@ function nextWord() {
 // Event listeners
 revealButton.addEventListener('click', revealPicture);
 nextButton.addEventListener('click', nextWord);
-
-// Start the game
-showWord();
