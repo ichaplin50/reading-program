@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: #E0F7FA;
@@ -111,6 +112,12 @@ button:hover {
     margin-bottom: 40px;
     text-shadow: 2px 2px 8px #fff;
     font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+#start-title span {
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    -webkit-text-stroke: 1px white;
+    font-weight: bold;
 }
 #start-button {
     position: relative;

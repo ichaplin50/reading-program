@@ -36,24 +36,10 @@ function shuffleArray(array) {
 
 shuffleArray(wordList);
 
-const sessionLengthSlider = document.getElementById('session-length-slider');
-const sessionLengthValue = document.getElementById('session-length-value');
-
-// Set slider max and default value
-sessionLengthSlider.max = wordList.length;
-const defaultSessionLength = Math.min(10, wordList.length);
-sessionLengthSlider.value = defaultSessionLength;
-sessionLengthValue.textContent = defaultSessionLength;
-
-// Update value display on slider input
-sessionLengthSlider.addEventListener('input', function() {
-    sessionLengthValue.textContent = sessionLengthSlider.value;
-});
-
-let sessionLength = defaultSessionLength;
-let sessionWords = wordList.slice(0, sessionLength);
+const sessionLength = 10;
+const sessionWords = wordList.slice(0, sessionLength);
 let currentIndex = 0;
-let totalWords = sessionWords.length;
+const totalWords = sessionWords.length;
 
 const wordDisplay = document.getElementById('word-display');
 const revealButton = document.getElementById('reveal-button');
@@ -68,11 +54,6 @@ const gameContainer = document.querySelector('.game-container');
 startButton.addEventListener('click', function() {
     startScreen.style.display = 'none';
     gameContainer.style.display = 'block';
-    sessionLength = parseInt(sessionLengthSlider.value, 10);
-    shuffleArray(wordList);
-    sessionWords = wordList.slice(0, sessionLength);
-    currentIndex = 0;
-    totalWords = sessionWords.length;
     showWord();
 });
 
