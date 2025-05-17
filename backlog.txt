@@ -7,6 +7,7 @@ READING WORD GAME BACKLOG
 4. Add new words: cow, bat, hat
 5. Add a feature for progress tracking
 6. Get set up with Git to enable version control
+7. Add a start screen
 
 📌 To Do List
 1. Add a feature for voice-enabled answers
@@ -21,3 +22,4 @@ READING WORD GAME BACKLOG
 10. Add sound effects
 12. Optimize performance
 13. Add achievements
+

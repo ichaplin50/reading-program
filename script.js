@@ -29,8 +29,10 @@ function shuffleArray(array) {
 
 shuffleArray(wordList);
 
+const sessionLength = 10;
+const sessionWords = wordList.slice(0, sessionLength);
 let currentIndex = 0;
-const totalWords = wordList.length;
+const totalWords = sessionWords.length;
 
 const wordDisplay = document.getElementById('word-display');
 const revealButton = document.getElementById('reveal-button');
@@ -55,7 +57,7 @@ function updateProgressBar() {
 
 // Function to show the current word
 function showWord() {
-    wordDisplay.textContent = wordList[currentIndex].word;
+    wordDisplay.textContent = sessionWords[currentIndex].word;
     imageContainer.innerHTML = "";
     revealButton.style.display = "inline-block";
     nextButton.style.display = "none";
@@ -65,7 +67,7 @@ function showWord() {
 // Function to reveal the picture
 function revealPicture() {
     const img = document.createElement('img');
-    img.src = wordList[currentIndex].image;
+    img.src = sessionWords[currentIndex].image;
     imageContainer.appendChild(img, revealButton);
 
     // Trigger confetti
@@ -84,7 +86,7 @@ function revealPicture() {
 // Function to go to the next word
 function nextWord() {
     currentIndex++;
-    if (currentIndex >= wordList.length) {
+    if (currentIndex >= sessionWords.length) {
         wordDisplay.textContent = "Great job!";
         imageContainer.innerHTML = "";
         revealButton.style.display = "none";
