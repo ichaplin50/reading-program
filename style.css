@@ -1,5 +1,5 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     background-color: #E0F7FA;
     text-align: center;
     margin-top: 50px;
@@ -100,7 +100,7 @@ button:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.9;
     z-index: 1;
 }
 #start-title {
@@ -108,9 +108,10 @@ button:hover {
     z-index: 2;
     font-size: 64px;
     color: #01579b;
-    margin-bottom: 40px;
+    margin-top: -40px;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 8px #fff;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Fredoka', sans-serif;
 }
 #start-title span {
     display: inline-block;

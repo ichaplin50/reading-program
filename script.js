@@ -24,6 +24,9 @@ const wordList = [
     { word: "Clam", image: "images/clam.jpg"},
     { word: "Box", image: "images/box.jpg"},
     { word: "Book", image: "images/book.jpg"},
+    { word: "Lexus", image: "images/lexus.jpg"},
+    { word: "Honda", image: "images/honda.jpg"},
+    { word: "Pacifica", image: "images/pacifica.jpg"},
 ];
 
 // Fisher–Yates shuffle function
