@@ -3,22 +3,113 @@ let fullWordList = [];
 let isLoading = true;
 let filters = { type: [], letters: [], phonics: [] };
 
-// Filter words based on selected criteria
+// Filter logic (AND across categories, OR within each category)
 function filterWords(filters, words) {
-    const filteredWords = words.filter(word => {
-        if (filters.type.length === 0 && filters.letters.length === 0 && filters.phonics.length === 0) {
-            return true;
+    return words.filter(word => {
+        if (filters.type.length > 0 && !word.type?.some(t => filters.type.includes(t))) {
+            return false;
         }
-        if (filters.type.length > 0) {
-            const hasMatchingType = word.type && word.type.some(type => filters.type.includes(type));
-            if (!hasMatchingType) return false;
+        if (filters.letters.length > 0 && !filters.letters.every(l => word.letters.includes(l))) {
+            return false;
+        }
+        if (filters.phonics.length > 0 && !word.phonics.some(p => filters.phonics.includes(p))) {
+            return false;
         }
         return true;
     });
-    return filteredWords;
 }
 
-// Fetch words from words.json
+// Utility: Get unique values
+function getUniqueValues(words, key) {
+    const values = words.flatMap(w => w[key] || []);
+    return [...new Set(values)].sort();
+}
+
+// Render checkbox groups
+function renderFilterGroup(containerId, values, category) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+
+    // Select/Deselect All buttons
+    const controls = document.createElement('div');
+    controls.style.marginBottom = '10px';
+
+    const selectAll = document.createElement('button');
+    selectAll.textContent = 'Select All';
+    selectAll.onclick = () => {
+        filters[category] = [...values];
+        renderFilters(); // re-render to reflect changes
+    };
+    const deselectAll = document.createElement('button');
+    deselectAll.textContent = 'Deselect All';
+    deselectAll.onclick = () => {
+        filters[category] = [];
+        renderFilters(); // re-render to reflect changes
+    };
+
+    controls.appendChild(selectAll);
+    controls.appendChild(deselectAll);
+    container.appendChild(controls);
+
+    // Checkbox list
+    values.forEach(val => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = val;
+        checkbox.checked = filters[category].includes(val);
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                filters[category].push(val);
+            } else {
+                filters[category] = filters[category].filter(v => v !== val);
+            }
+            updateMatchCount();
+        });
+
+        label.appendChild(checkbox);
+        label.append(` ${val}`);
+        container.appendChild(label);
+        container.appendChild(document.createElement('br'));
+    });
+}
+
+function renderFilters() {
+    renderFilterGroup('type-filters', getUniqueValues(fullWordList, 'type'), 'type');
+    renderFilterGroup('letter-filters', getUniqueValues(fullWordList, 'letters'), 'letters');
+    renderFilterGroup('phonics-filters', getUniqueValues(fullWordList, 'phonics'), 'phonics');
+    updateMatchCount();
+}
+
+function updateMatchCount() {
+    const matchCount = filterWords(filters, fullWordList).length;
+    document.getElementById('match-count').textContent = `Matching words: ${matchCount}`;
+
+    const startButton = document.getElementById('start-button');
+    startButton.disabled = (matchCount === 0);
+
+    const sessionLengthSlider = document.getElementById('session-length-slider');
+    sessionLengthSlider.max = matchCount;
+    if (parseInt(sessionLengthSlider.value, 10) > matchCount) {
+        sessionLengthSlider.value = matchCount;
+        document.getElementById('session-length-value').textContent = matchCount;
+    }
+}
+
+document.getElementById('customize-button').addEventListener('click', () => {
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('customize-screen').style.display = 'block';
+    renderFilters();
+});
+
+document.getElementById('back-button').addEventListener('click', () => {
+    document.getElementById('customize-screen').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
+    wordList = filterWords(filters, fullWordList);
+    initializeGame();
+});
+
+// Initial game + word loader
 async function loadWords() {
     const loadingIndicator = document.getElementById('loading-indicator');
     const sessionLengthContainer = document.getElementById('session-length-container');
@@ -75,7 +166,7 @@ function initializeGame() {
     const startButton = document.getElementById('start-button');
     const gameContainer = document.querySelector('.game-container');
 
-    startButton.addEventListener('click', () => {
+    startButton.onclick = () => {
         startScreen.style.display = 'none';
         gameContainer.style.display = 'block';
         sessionLength = parseInt(sessionLengthSlider.value, 10);
@@ -84,7 +175,7 @@ function initializeGame() {
         currentIndex = 0;
         totalWords = sessionWords.length;
         showWord();
-    });
+    };
 
     function updateProgressBar() {
         const progressPercent = (currentIndex / totalWords) * 100;
@@ -100,16 +191,13 @@ function initializeGame() {
     }
 
     function revealPicture() {
-        imageContainer.innerHTML = "";  // Clear any previous image
-    
+        imageContainer.innerHTML = ""; // prevent double image
         const img = document.createElement('img');
         img.src = sessionWords[currentIndex].image;
         imageContainer.appendChild(img);
-    
         if (window.confetti) {
             confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
         }
-    
         revealButton.style.display = "none";
         nextButton.style.display = "inline-block";
     }
@@ -127,64 +215,9 @@ function initializeGame() {
         }
     }
 
-    revealButton.addEventListener('click', revealPicture);
-    nextButton.addEventListener('click', nextWord);
+    revealButton.onclick = revealPicture;
+    nextButton.onclick = nextWord;
 }
-
-// Customize Words UI Logic
-function getUniqueTypes(words) {
-    const allTypes = words.flatMap(w => w.type || []);
-    return [...new Set(allTypes)];
-}
-
-function renderTypeFilters(types) {
-    const container = document.getElementById('type-filters');
-    container.innerHTML = '';
-
-    types.forEach(type => {
-        const label = document.createElement('label');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = type;
-        checkbox.checked = filters.type.includes(type);
-        checkbox.addEventListener('change', () => {
-            updateTypeFilters();
-        });
-
-        label.appendChild(checkbox);
-        label.append(` ${type}`);
-        container.appendChild(label);
-        container.appendChild(document.createElement('br'));
-    });
-}
-
-function updateTypeFilters() {
-    const checkboxes = document.querySelectorAll('#type-filters input[type="checkbox"]');
-    filters.type = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
-    updateMatchCount();
-}
-
-function updateMatchCount() {
-    const matchCount = filterWords(filters, fullWordList).length;
-    document.getElementById('match-count').textContent = `Matching words: ${matchCount}`;
-}
-
-// Screen Transitions
-document.getElementById('customize-button').addEventListener('click', () => {
-    document.getElementById('start-screen').style.display = 'none';
-    document.getElementById('customize-screen').style.display = 'block';
-    renderTypeFilters(getUniqueTypes(fullWordList));
-    updateMatchCount();
-});
-
-document.getElementById('back-button').addEventListener('click', () => {
-    document.getElementById('customize-screen').style.display = 'none';
-    document.getElementById('start-screen').style.display = 'block';
-    wordList = filterWords(filters, fullWordList);
-    initializeGame();
-});
-
-loadWords();
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -192,3 +225,5 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+loadWords();

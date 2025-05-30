@@ -29,8 +29,9 @@
 	1. add headers to the filter selection (ex: type)
 	2. add some form of an "apply changes" button? some way to allow users to go back without making changes or go back to the start screen WITH the changes
 	3. adjust experience where selecting nothing means selecting everything
-	4. probably some sort of remove all/select all button?
-	5. improve selection UX so that you can't deselect everything
+	4. improve selection UX so that you can't deselect everything
+	5. make the letter selection less ridiculous
+	6. make the select all / deselect all less ridiculous
 8. Great job screen -- show the pictures that were completed during the session
 9. Enhance the UX for the words screens
 10. Enhance the UX for the Great Job screen
