@@ -1,0 +1,437 @@
+[
+  {
+    "word": "Cat",
+    "type": [
+      "animal"
+    ],
+    "image": "images/cat.jpg",
+    "letters": [
+      "c",
+      "a",
+      "t"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Truck",
+    "type": [
+      "car"
+    ],
+    "image": "images/truck.jpg",
+    "letters": [
+      "t",
+      "r",
+      "u",
+      "c",
+      "k"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Dog",
+    "type": [
+      "animal"
+    ],
+    "image": "images/dog.jpg",
+    "letters": [
+      "d",
+      "o",
+      "g"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Ball",
+    "type": [
+      "thing"
+    ],
+    "image": "images/ball.jpg",
+    "letters": [
+      "b",
+      "a",
+      "l"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Car",
+    "type": [
+      "car"
+    ],
+    "image": "images/car.jpg",
+    "letters": [
+      "c",
+      "a",
+      "r"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Ford",
+    "type": [
+      "car"
+    ],
+    "image": "images/ford.jpg",
+    "letters": [
+      "f",
+      "o",
+      "r",
+      "d"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Alien",
+    "type": [
+      "thing"
+    ],
+    "image": "images/alien.jpg",
+    "letters": [
+      "a",
+      "l",
+      "i",
+      "e",
+      "n"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Bug",
+    "type": [
+      "animal"
+    ],
+    "image": "images/bug.jpg",
+    "letters": [
+      "b",
+      "u",
+      "g"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Bee",
+    "type": [
+      "animal"
+    ],
+    "image": "images/bee.jpg",
+    "letters": [
+      "b",
+      "e"
+    ],
+    "phonics": [
+      "ee"
+    ]
+  },
+  {
+    "word": "Jaguar",
+    "type": [
+      "car"
+    ],
+    "image": "images/jaguar.jpg",
+    "letters": [
+      "j",
+      "a",
+      "g",
+      "u",
+      "r"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Kia",
+    "type": [
+      "car"
+    ],
+    "image": "images/kia.jpg",
+    "letters": [
+      "k",
+      "i",
+      "a"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Deer",
+    "type": [
+      "animal"
+    ],
+    "image": "images/deer.jpg",
+    "letters": [
+      "d",
+      "e",
+      "r"
+    ],
+    "phonics": [
+      "ee"
+    ]
+  },
+  {
+    "word": "Cow",
+    "type": [
+      "animal"
+    ],
+    "image": "images/cow.jpg",
+    "letters": [
+      "c",
+      "o",
+      "w"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Bat",
+    "type": [
+      "animal"
+    ],
+    "image": "images/bat.jpg",
+    "letters": [
+      "b",
+      "a",
+      "t"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Hat",
+    "type": [
+      "thing"
+    ],
+    "image": "images/hat.jpg",
+    "letters": [
+      "h",
+      "a",
+      "t"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Pig",
+    "type": [
+      "animal"
+    ],
+    "image": "images/pig.jpg",
+    "letters": [
+      "p",
+      "i",
+      "g"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Person",
+    "type": [
+      "person"
+    ],
+    "image": "images/person.jpg",
+    "letters": [
+      "p",
+      "e",
+      "r",
+      "s",
+      "o",
+      "n"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Zebra",
+    "type": [
+      "animal"
+    ],
+    "image": "images/zebra.jpg",
+    "letters": [
+      "z",
+      "e",
+      "b",
+      "r",
+      "a"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Lion",
+    "type": [
+      "animal"
+    ],
+    "image": "images/lion.jpg",
+    "letters": [
+      "l",
+      "i",
+      "o",
+      "n"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Sloth",
+    "type": [
+      "animal"
+    ],
+    "image": "images/sloth.jpg",
+    "letters": [
+      "s",
+      "l",
+      "o",
+      "t",
+      "h"
+    ],
+    "phonics": [
+      "th"
+    ]
+  },
+  {
+    "word": "Panda",
+    "type": [
+      "animal"
+    ],
+    "image": "images/panda.jpg",
+    "letters": [
+      "p",
+      "a",
+      "n",
+      "d"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Frog",
+    "type": [
+      "animal"
+    ],
+    "image": "images/frog.jpg",
+    "letters": [
+      "f",
+      "r",
+      "o",
+      "g"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Clam",
+    "type": [
+      "animal"
+    ],
+    "image": "images/clam.jpg",
+    "letters": [
+      "c",
+      "l",
+      "a",
+      "m"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Box",
+    "type": [
+      "thing"
+    ],
+    "image": "images/box.jpg",
+    "letters": [
+      "b",
+      "o",
+      "x"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Book",
+    "type": [
+      "thing"
+    ],
+    "image": "images/book.jpg",
+    "letters": [
+      "b",
+      "o",
+      "k"
+    ],
+    "phonics": [
+      "oo"
+    ]
+  },
+  {
+    "word": "Lexus",
+    "type": [
+      "car"
+    ],
+    "image": "images/lexus.jpg",
+    "letters": [
+      "l",
+      "e",
+      "x",
+      "u",
+      "s"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Honda",
+    "type": [
+      "car"
+    ],
+    "image": "images/honda.jpg",
+    "letters": [
+      "h",
+      "o",
+      "n",
+      "d",
+      "a"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Pacifica",
+    "type": [
+      "car"
+    ],
+    "image": "images/pacifica.jpg",
+    "letters": [
+      "p",
+      "a",
+      "c",
+      "i",
+      "f"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Boy",
+    "type": [
+      "person"
+    ],
+    "image": "images/boy.jpg",
+    "letters": [
+      "b",
+      "o",
+      "y"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Girl",
+    "type": [
+      "person"
+    ],
+    "image": "images/girl.jpg",
+    "letters": [
+      "g",
+      "i",
+      "r",
+      "l"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "BMW",
+    "type": [
+      "car"
+    ],
+    "image": "images/bmw.jpg",
+    "letters": [
+      "b",
+      "m",
+      "w"
+    ],
+    "phonics": []
+  }
+]
