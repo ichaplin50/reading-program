@@ -25,22 +25,28 @@
 	6. P3 can be the letters in the word itself
 	7. P4 can be phonics
 6. Enhance the startup screen -- make it more dynamic, kind of like the unpacking screen
-7. Great job screen -- show the pictures that were completed during the session
-8. Enhance the UX for the words screens
-9. Enhance the UX for the Great Job screen
-10. Add analytics on session length (and record those somewhere?)
-11. Add a feature to find pictures automatically (long-term)
-12. Add a feature for voice-enabled answers (dependency on options)
+7. Enhance the customize screen
+	1. add headers to the filter selection (ex: type)
+	2. add some form of an "apply changes" button? some way to allow users to go back without making changes or go back to the start screen WITH the changes
+	3. adjust experience where selecting nothing means selecting everything
+	4. probably some sort of remove all/select all button?
+	5. improve selection UX so that you can't deselect everything
+8. Great job screen -- show the pictures that were completed during the session
+9. Enhance the UX for the words screens
+10. Enhance the UX for the Great Job screen
+11. Add analytics on session length (and record those somewhere?)
+12. Add a feature to find pictures automatically (long-term)
+13. Add a feature for voice-enabled answers (dependency on options)
 	1. make the voice optional
-13. Add a Capital Letter mode
-14. Add a lower case letter mode
-15. Add more word categories
-16. Improve the user interface
-17. Add sound effects
-18. Optimize performance
-19. Host in the cloud; enable access from anywhere
-20. Add scores (dependency on voice enabled, ) -- PRD
+14. Add a Capital Letter mode
+15. Add a lower case letter mode
+16. Add more word categories
+17. Improve the user interface
+18. Add sound effects
+19. Optimize performance
+20. Host in the cloud; enable access from anywhere
+21. Add scores (dependency on voice enabled, ) -- PRD
 	1. make the scoring optional
-21. Add achievements (dependency on scores) -- PRD
-22. Mobile enablement
-23. User profiles (for different kids) -- PRD
+22. Add achievements (dependency on scores) -- PRD
+23. Mobile enablement
+24. User profiles (for different kids) -- PRD

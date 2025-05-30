@@ -1,27 +1,20 @@
 let wordList = [];
+let fullWordList = [];
 let isLoading = true;
-let filters = { type: ["car"], letters: [], phonics: [] };
+let filters = { type: [], letters: [], phonics: [] };
 
 // Filter words based on selected criteria
 function filterWords(filters, words) {
-    const matchingWords = words.filter(word => {
-        // If no filters are selected, return all words
+    const filteredWords = words.filter(word => {
         if (filters.type.length === 0 && filters.letters.length === 0 && filters.phonics.length === 0) {
             return true;
         }
-
-        // Check type filter
         if (filters.type.length > 0) {
             const hasMatchingType = word.type && word.type.some(type => filters.type.includes(type));
             if (!hasMatchingType) return false;
         }
-
-        // We'll implement letters and phonics filters in later phases
         return true;
     });
-    
-    console.log('Words matching current filters:', matchingWords); // More explicit debug message
-    console.log('Filtered words:', filteredWords); // Debug log
     return filteredWords;
 }
 
@@ -30,50 +23,40 @@ async function loadWords() {
     const loadingIndicator = document.getElementById('loading-indicator');
     const sessionLengthContainer = document.getElementById('session-length-container');
     const startButton = document.getElementById('start-button');
-    
-    // Show loading indicator and hide controls
+
     loadingIndicator.style.display = 'block';
     sessionLengthContainer.style.display = 'none';
     startButton.style.display = 'none';
-    
+
     try {
         const response = await fetch('./words.json');
-        if (!response.ok) {
-            throw new Error(`Failed to load words: ${response.status} ${response.statusText}`);
-        }
+        if (!response.ok) throw new Error(`Failed to load words: ${response.status}`);
         const allWords = await response.json();
+        fullWordList = allWords;
         wordList = filterWords(filters, allWords);
         isLoading = false;
-        
-        // Hide loading indicator and show controls
+
         loadingIndicator.style.display = 'none';
         sessionLengthContainer.style.display = 'block';
         startButton.style.display = 'inline-block';
-        
-        // Initialize game elements after words are loaded
+
         initializeGame();
     } catch (error) {
         console.error('Error loading words:', error);
-        loadingIndicator.innerHTML = `
-            <p style="color: #F4511E;">Error loading words: ${error.message}</p>
-            <p>Please make sure you're running this from a web server.</p>
-        `;
+        loadingIndicator.innerHTML = `<p style="color: #F4511E;">Error: ${error.message}</p>`;
     }
 }
 
-// Initialize game elements
 function initializeGame() {
     const sessionLengthSlider = document.getElementById('session-length-slider');
     const sessionLengthValue = document.getElementById('session-length-value');
 
-    // Set slider max and default value
     sessionLengthSlider.max = wordList.length;
     const defaultSessionLength = Math.min(10, wordList.length);
     sessionLengthSlider.value = defaultSessionLength;
     sessionLengthValue.textContent = defaultSessionLength;
 
-    // Update value display on slider input
-    sessionLengthSlider.addEventListener('input', function() {
+    sessionLengthSlider.addEventListener('input', () => {
         sessionLengthValue.textContent = sessionLengthSlider.value;
     });
 
@@ -92,7 +75,7 @@ function initializeGame() {
     const startButton = document.getElementById('start-button');
     const gameContainer = document.querySelector('.game-container');
 
-    startButton.addEventListener('click', function() {
+    startButton.addEventListener('click', () => {
         startScreen.style.display = 'none';
         gameContainer.style.display = 'block';
         sessionLength = parseInt(sessionLengthSlider.value, 10);
@@ -108,7 +91,6 @@ function initializeGame() {
         progressBar.style.width = `${progressPercent}%`;
     }
 
-    // Function to show the current word
     function showWord() {
         wordDisplay.textContent = sessionWords[currentIndex].word;
         imageContainer.innerHTML = "";
@@ -117,26 +99,21 @@ function initializeGame() {
         updateProgressBar();
     }
 
-    // Function to reveal the picture
     function revealPicture() {
+        imageContainer.innerHTML = "";  // Clear any previous image
+    
         const img = document.createElement('img');
         img.src = sessionWords[currentIndex].image;
-        imageContainer.appendChild(img, revealButton);
-
-        // Trigger confetti
+        imageContainer.appendChild(img);
+    
         if (window.confetti) {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
         }
-
+    
         revealButton.style.display = "none";
         nextButton.style.display = "inline-block";
     }
 
-    // Function to go to the next word
     function nextWord() {
         currentIndex++;
         if (currentIndex >= sessionWords.length) {
@@ -150,15 +127,65 @@ function initializeGame() {
         }
     }
 
-    // Event listeners
     revealButton.addEventListener('click', revealPicture);
     nextButton.addEventListener('click', nextWord);
 }
 
-// Start loading words when the script runs
+// Customize Words UI Logic
+function getUniqueTypes(words) {
+    const allTypes = words.flatMap(w => w.type || []);
+    return [...new Set(allTypes)];
+}
+
+function renderTypeFilters(types) {
+    const container = document.getElementById('type-filters');
+    container.innerHTML = '';
+
+    types.forEach(type => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = type;
+        checkbox.checked = filters.type.includes(type);
+        checkbox.addEventListener('change', () => {
+            updateTypeFilters();
+        });
+
+        label.appendChild(checkbox);
+        label.append(` ${type}`);
+        container.appendChild(label);
+        container.appendChild(document.createElement('br'));
+    });
+}
+
+function updateTypeFilters() {
+    const checkboxes = document.querySelectorAll('#type-filters input[type="checkbox"]');
+    filters.type = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+    updateMatchCount();
+}
+
+function updateMatchCount() {
+    const matchCount = filterWords(filters, fullWordList).length;
+    document.getElementById('match-count').textContent = `Matching words: ${matchCount}`;
+}
+
+// Screen Transitions
+document.getElementById('customize-button').addEventListener('click', () => {
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('customize-screen').style.display = 'block';
+    renderTypeFilters(getUniqueTypes(fullWordList));
+    updateMatchCount();
+});
+
+document.getElementById('back-button').addEventListener('click', () => {
+    document.getElementById('customize-screen').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
+    wordList = filterWords(filters, fullWordList);
+    initializeGame();
+});
+
 loadWords();
 
-// Fisher–Yates shuffle function
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

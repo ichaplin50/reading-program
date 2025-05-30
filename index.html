@@ -21,7 +21,16 @@
             <input type="range" id="session-length-slider" min="1" value="10">
         </div>
         <button id="start-button">Start Game</button>
+        <button id="customize-button">Customize Words</button>
     </div>
+
+    <div id="customize-screen" style="display: none;">
+        <h2>Customize Words</h2>
+        <div id="type-filters"></div>
+        <p id="match-count">Matching words: 0</p>
+        <button id="back-button">Back</button>
+    </div>
+
     <div class="game-container" style="display: none;">
         <div class="word-group">
             <div id="word-display" class="word"></div>
