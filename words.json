@@ -463,5 +463,78 @@
       "y"
     ],
     "phonics": []
+  },
+  {
+    "word": "Rat",
+    "type": [
+      "animal"
+    ],
+    "image": "images/rat.jpg",
+    "letters": [
+      "r",
+      "a",
+      "t"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Ferrari",
+    "type": [
+      "car"
+    ],
+    "image": "images/ferrari.jpg",
+    "letters": [
+      "f",
+      "e",
+      "r",
+      "a",
+      "i"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Tesla",
+    "type": [
+      "car"
+    ],
+    "image": "images/tesla.jpg",
+    "letters": [
+      "t",
+      "e",
+      "s",
+      "l",
+      "a"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Church",
+    "type": [
+      "thing"
+    ],
+    "image": "images/church.jpg",
+    "letters": [
+      "c",
+      "h",
+      "u",
+      "r"
+    ],
+    "phonics": [
+      "ch"
+    ]
+  },
+  {
+    "word": "Duck",
+    "type": [
+      "animal"
+    ],
+    "image": "images/duck.jpg",
+    "letters": [
+      "d",
+      "u",
+      "c",
+      "k"
+    ],
+    "phonics": []
   }
 ]

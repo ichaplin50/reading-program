@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 // Sample phonics list – customize as needed
-const phonicsList = ["oo", "th", "ee", "aw", "ough", "ch", "sh", "ai", "ou"];
+const phonicsList = ["oo", "th", "ee", "aw", "ough", "ch", "sh", "ai", "ou","ck","ch"];
 
 // Helper to get unique letters from word
 function getLetters(word) {

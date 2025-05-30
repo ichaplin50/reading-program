@@ -168,8 +168,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea8385562bfdb808",
+  "active": "7e184f18143ba967",
   "lastOpenFiles": [
+    "images/duck.jpg",
+    "images/church.jpg",
+    "images/tesla.jpg",
+    "images/ferrari.jpg",
+    "images/rat.jpg",
     "start-server.sh",
     "backup files/bookaroo_project_files/words.json",
     "backup files/bookaroo_project_files/style.css",
@@ -183,7 +188,6 @@
     "backup files/bookaroo_project_files",
     "backup files/bookaroo_project_files.zip",
     "backup files/Unconfirmed 40611.crdownload",
-    "Unconfirmed 532980.crdownload",
     "images/corolla.jpg",
     "images/camry.jpg",
     "rawWords.json.md",
@@ -195,10 +199,6 @@
     "future feature notes/Word Characteristics PRD.md",
     "future feature notes/Untitled.md",
     "images/girl.png",
-    "images/boy.png",
-    "images/honda.jpg",
-    "images/pacifica.jpg",
-    "images/lexus.jpg",
     "future feature notes/Session Length PRD.md"
   ]
 }

@@ -31,5 +31,10 @@
   { "word": "Girl", "type": ["person"] },
   { "word": "BMW", "type": ["car"] },
   { "word": "Corolla", "type": ["car"] },
-  { "word": "Camry", "type": ["car"] }
+  { "word": "Camry", "type": ["car"] },
+  { "word": "Rat", "type": ["animal"] },
+  { "word": "Ferrari", "type": ["car"] },
+  { "word": "Tesla", "type": ["car"] },
+  { "word": "Church", "type": ["thing"] },
+  { "word": "Duck", "type": ["animal"] }
 ]
