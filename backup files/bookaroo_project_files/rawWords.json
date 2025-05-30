@@ -29,7 +29,5 @@
   { "word": "Pacifica", "type": ["car"] },
   { "word": "Boy", "type": ["person"] },
   { "word": "Girl", "type": ["person"] },
-  { "word": "BMW", "type": ["car"] },
-  { "word": "Corolla", "type": ["car"] },
-  { "word": "Camry", "type": ["car"] }
+  { "word": "BMW", "type": ["car"] }
 ]

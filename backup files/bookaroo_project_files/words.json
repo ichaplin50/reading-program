@@ -433,35 +433,5 @@
       "w"
     ],
     "phonics": []
-  },
-  {
-    "word": "Corolla",
-    "type": [
-      "car"
-    ],
-    "image": "images/corolla.jpg",
-    "letters": [
-      "c",
-      "o",
-      "r",
-      "l",
-      "a"
-    ],
-    "phonics": []
-  },
-  {
-    "word": "Camry",
-    "type": [
-      "car"
-    ],
-    "image": "images/camry.jpg",
-    "letters": [
-      "c",
-      "a",
-      "m",
-      "r",
-      "y"
-    ],
-    "phonics": []
   }
 ]
