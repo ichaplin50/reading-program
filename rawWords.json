@@ -44,5 +44,9 @@
   { "word": "Shepherd", "type": ["person"] },
   { "word": "Shell", "type": ["thing"] },
   { "word": "Bird", "type": ["animal"] },
-  { "word": "Wash", "type": ["action"] }
+  { "word": "Wash", "type": ["action"] },
+  { "word": "Jeep", "type": ["car"] },
+  { "word": "Bed", "type": ["thing"] },
+  { "word": "Van", "type": ["car"] },
+  { "word": "Bus", "type": ["car"] }
 ]

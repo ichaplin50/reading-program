@@ -671,5 +671,59 @@
     "phonics": [
       "sh"
     ]
+  },
+  {
+    "word": "Jeep",
+    "type": [
+      "car"
+    ],
+    "image": "images/jeep.jpg",
+    "letters": [
+      "j",
+      "e",
+      "p"
+    ],
+    "phonics": [
+      "ee"
+    ]
+  },
+  {
+    "word": "Bed",
+    "type": [
+      "thing"
+    ],
+    "image": "images/bed.jpg",
+    "letters": [
+      "b",
+      "e",
+      "d"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Van",
+    "type": [
+      "car"
+    ],
+    "image": "images/van.jpg",
+    "letters": [
+      "v",
+      "a",
+      "n"
+    ],
+    "phonics": []
+  },
+  {
+    "word": "Bus",
+    "type": [
+      "car"
+    ],
+    "image": "images/bus.jpg",
+    "letters": [
+      "b",
+      "u",
+      "s"
+    ],
+    "phonics": []
   }
 ]
