@@ -36,5 +36,13 @@
   { "word": "Ferrari", "type": ["car"] },
   { "word": "Tesla", "type": ["car"] },
   { "word": "Church", "type": ["thing"] },
-  { "word": "Duck", "type": ["animal"] }
+  { "word": "Duck", "type": ["animal"] },
+  { "word": "Fish", "type": ["animal"] },
+  { "word": "Shark", "type": ["animal"] },
+  { "word": "Shoe", "type": ["thing"] },
+  { "word": "Sheep", "type": ["animal"] },
+  { "word": "Shepherd", "type": ["person"] },
+  { "word": "Shell", "type": ["thing"] },
+  { "word": "Bird", "type": ["animal"] },
+  { "word": "Wash", "type": ["action"] }
 ]

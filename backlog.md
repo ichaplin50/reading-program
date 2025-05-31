@@ -10,20 +10,14 @@
 7. Add a start screen
 8. Limit sessions to 10 words
 9. Add a feature to select the number of words per session
+10. Enable a feature to customize the words included in a session: type, letters, phonics
 
 📌 To Do List
 1. Enable a loop back to the start screen after the 'great job' screen
 2. Enable gifs for action words
 3. Add tests in the code base
 4. Automate updates to the ChatGPT project folder whenever I make a local commit
-5. Enable the game at different reading levels, selected at startup -- PRD
-	1. characteristics of words, including number of letters, phonics, word type (animal, car), letters included, etc.
-	2. difficulty level that is a composite of those factors
-	3. P0 can be number of letters in the word
-	4. P1 can be animals
-	5. P2 can be cars
-	6. P3 can be the letters in the word itself
-	7. P4 can be phonics
+5. Add a filter for letter count
 6. Enhance the startup screen -- make it more dynamic, kind of like the unpacking screen
 7. Enhance the customize screen
 	1. add headers to the filter selection (ex: type)

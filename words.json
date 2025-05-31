@@ -25,7 +25,9 @@
       "c",
       "k"
     ],
-    "phonics": []
+    "phonics": [
+      "ck"
+    ]
   },
   {
     "word": "Dog",
@@ -520,6 +522,7 @@
       "r"
     ],
     "phonics": [
+      "ch",
       "ch"
     ]
   },
@@ -535,6 +538,138 @@
       "c",
       "k"
     ],
+    "phonics": [
+      "ck"
+    ]
+  },
+  {
+    "word": "Fish",
+    "type": [
+      "animal"
+    ],
+    "image": "images/fish.jpg",
+    "letters": [
+      "f",
+      "i",
+      "s",
+      "h"
+    ],
+    "phonics": [
+      "sh"
+    ]
+  },
+  {
+    "word": "Shark",
+    "type": [
+      "animal"
+    ],
+    "image": "images/shark.jpg",
+    "letters": [
+      "s",
+      "h",
+      "a",
+      "r",
+      "k"
+    ],
+    "phonics": [
+      "sh"
+    ]
+  },
+  {
+    "word": "Shoe",
+    "type": [
+      "thing"
+    ],
+    "image": "images/shoe.jpg",
+    "letters": [
+      "s",
+      "h",
+      "o",
+      "e"
+    ],
+    "phonics": [
+      "sh"
+    ]
+  },
+  {
+    "word": "Sheep",
+    "type": [
+      "animal"
+    ],
+    "image": "images/sheep.jpg",
+    "letters": [
+      "s",
+      "h",
+      "e",
+      "p"
+    ],
+    "phonics": [
+      "ee",
+      "sh"
+    ]
+  },
+  {
+    "word": "Shepherd",
+    "type": [
+      "person"
+    ],
+    "image": "images/shepherd.jpg",
+    "letters": [
+      "s",
+      "h",
+      "e",
+      "p",
+      "r",
+      "d"
+    ],
+    "phonics": [
+      "sh"
+    ]
+  },
+  {
+    "word": "Shell",
+    "type": [
+      "thing"
+    ],
+    "image": "images/shell.jpg",
+    "letters": [
+      "s",
+      "h",
+      "e",
+      "l"
+    ],
+    "phonics": [
+      "sh"
+    ]
+  },
+  {
+    "word": "Bird",
+    "type": [
+      "animal"
+    ],
+    "image": "images/bird.jpg",
+    "letters": [
+      "b",
+      "i",
+      "r",
+      "d"
+    ],
     "phonics": []
+  },
+  {
+    "word": "Wash",
+    "type": [
+      "action"
+    ],
+    "image": "images/wash.jpg",
+    "letters": [
+      "w",
+      "a",
+      "s",
+      "h"
+    ],
+    "phonics": [
+      "sh"
+    ]
   }
 ]
