@@ -10,7 +10,8 @@
       "a",
       "t"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Truck",
@@ -27,7 +28,8 @@
     ],
     "phonics": [
       "ck"
-    ]
+    ],
+    "letterCount": 5
   },
   {
     "word": "Dog",
@@ -40,7 +42,8 @@
       "o",
       "g"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Ball",
@@ -53,7 +56,8 @@
       "a",
       "l"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Car",
@@ -66,7 +70,8 @@
       "a",
       "r"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Ford",
@@ -80,7 +85,8 @@
       "r",
       "d"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Alien",
@@ -95,7 +101,8 @@
       "e",
       "n"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Bug",
@@ -108,7 +115,8 @@
       "u",
       "g"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Bee",
@@ -122,7 +130,8 @@
     ],
     "phonics": [
       "ee"
-    ]
+    ],
+    "letterCount": 3
   },
   {
     "word": "Jaguar",
@@ -137,7 +146,8 @@
       "u",
       "r"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 6
   },
   {
     "word": "Kia",
@@ -150,7 +160,8 @@
       "i",
       "a"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Deer",
@@ -165,7 +176,8 @@
     ],
     "phonics": [
       "ee"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Cow",
@@ -178,7 +190,8 @@
       "o",
       "w"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Bat",
@@ -191,7 +204,8 @@
       "a",
       "t"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Hat",
@@ -204,7 +218,8 @@
       "a",
       "t"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Pig",
@@ -217,7 +232,8 @@
       "i",
       "g"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Person",
@@ -233,7 +249,8 @@
       "o",
       "n"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 6
   },
   {
     "word": "Zebra",
@@ -248,7 +265,8 @@
       "r",
       "a"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Lion",
@@ -262,7 +280,8 @@
       "o",
       "n"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Sloth",
@@ -279,7 +298,8 @@
     ],
     "phonics": [
       "th"
-    ]
+    ],
+    "letterCount": 5
   },
   {
     "word": "Panda",
@@ -293,7 +313,8 @@
       "n",
       "d"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Frog",
@@ -307,7 +328,8 @@
       "o",
       "g"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Clam",
@@ -321,7 +343,8 @@
       "a",
       "m"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Box",
@@ -334,7 +357,8 @@
       "o",
       "x"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Book",
@@ -349,7 +373,8 @@
     ],
     "phonics": [
       "oo"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Lexus",
@@ -364,7 +389,8 @@
       "u",
       "s"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Honda",
@@ -379,7 +405,8 @@
       "d",
       "a"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Pacifica",
@@ -394,7 +421,8 @@
       "i",
       "f"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 8
   },
   {
     "word": "Boy",
@@ -407,7 +435,8 @@
       "o",
       "y"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Girl",
@@ -421,7 +450,8 @@
       "r",
       "l"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "BMW",
@@ -434,7 +464,8 @@
       "m",
       "w"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Corolla",
@@ -449,7 +480,8 @@
       "l",
       "a"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 7
   },
   {
     "word": "Camry",
@@ -464,7 +496,8 @@
       "r",
       "y"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Rat",
@@ -477,7 +510,8 @@
       "a",
       "t"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Ferrari",
@@ -492,7 +526,8 @@
       "a",
       "i"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 7
   },
   {
     "word": "Tesla",
@@ -507,7 +542,8 @@
       "l",
       "a"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 5
   },
   {
     "word": "Church",
@@ -524,7 +560,8 @@
     "phonics": [
       "ch",
       "ch"
-    ]
+    ],
+    "letterCount": 6
   },
   {
     "word": "Duck",
@@ -540,7 +577,8 @@
     ],
     "phonics": [
       "ck"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Fish",
@@ -556,7 +594,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Shark",
@@ -573,7 +612,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 5
   },
   {
     "word": "Shoe",
@@ -589,7 +629,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Sheep",
@@ -606,7 +647,8 @@
     "phonics": [
       "ee",
       "sh"
-    ]
+    ],
+    "letterCount": 5
   },
   {
     "word": "Shepherd",
@@ -624,7 +666,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 8
   },
   {
     "word": "Shell",
@@ -640,7 +683,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 5
   },
   {
     "word": "Bird",
@@ -654,7 +698,8 @@
       "r",
       "d"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 4
   },
   {
     "word": "Wash",
@@ -670,7 +715,8 @@
     ],
     "phonics": [
       "sh"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Jeep",
@@ -685,7 +731,8 @@
     ],
     "phonics": [
       "ee"
-    ]
+    ],
+    "letterCount": 4
   },
   {
     "word": "Bed",
@@ -698,7 +745,8 @@
       "e",
       "d"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Van",
@@ -711,7 +759,8 @@
       "a",
       "n"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   },
   {
     "word": "Bus",
@@ -724,6 +773,7 @@
       "u",
       "s"
     ],
-    "phonics": []
+    "phonics": [],
+    "letterCount": 3
   }
 ]

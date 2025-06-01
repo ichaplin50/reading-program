@@ -30,9 +30,10 @@ const enrichedWords = rawWords.map(w => ({
     ...w,
     image: `images/${w.word.toLowerCase()}.jpg`,
     letters: getLetters(w.word),
-    phonics: getPhonics(w.word)
+    phonics: getPhonics(w.word),
+    letterCount: w.word.length
 }));
 
 // Write to words.json
 fs.writeFileSync('words.json', JSON.stringify(enrichedWords, null, 2));
-console.log("✅ words.json has been generated with image paths, letters, and phonics.");
+console.log("✅ words.json has been generated with image paths, letters, phonics, and letter count.");

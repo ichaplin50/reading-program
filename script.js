@@ -1,7 +1,7 @@
 let wordList = [];
 let fullWordList = [];
 let isLoading = true;
-let filters = { type: [], letters: [], phonics: [] };
+let filters = { type: [], letters: [], phonics: [], letterCount: [] };
 
 // Filter logic (AND across categories, OR within each category)
 function filterWords(filters, words) {
@@ -13,6 +13,9 @@ function filterWords(filters, words) {
             return false;
         }
         if (filters.phonics.length > 0 && !word.phonics.some(p => filters.phonics.includes(p))) {
+            return false;
+        }
+        if (filters.letterCount.length > 0 && !filters.letterCount.includes(word.letterCount)) {
             return false;
         }
         return true;
@@ -78,6 +81,11 @@ function renderFilters() {
     renderFilterGroup('type-filters', getUniqueValues(fullWordList, 'type'), 'type');
     renderFilterGroup('letter-filters', getUniqueValues(fullWordList, 'letters'), 'letters');
     renderFilterGroup('phonics-filters', getUniqueValues(fullWordList, 'phonics'), 'phonics');
+    renderFilterGroup(
+        'lettercount-filters',
+        getUniqueValues(fullWordList, 'letterCount').map(n => String(n)),
+        'letterCount'
+      );      
     updateMatchCount();
 }
 
@@ -120,7 +128,7 @@ async function loadWords() {
     startButton.style.display = 'none';
 
     try {
-        const response = await fetch('./words.json');
+        const response = await fetch(`./words.json?cacheBust=${Date.now()}`);
         if (!response.ok) throw new Error(`Failed to load words: ${response.status}`);
         const allWords = await response.json();
         fullWordList = allWords;
@@ -159,6 +167,7 @@ function initializeGame() {
     const wordDisplay = document.getElementById('word-display');
     const revealButton = document.getElementById('reveal-button');
     const nextButton = document.getElementById('next-button');
+    const playAgainButton = document.getElementById('play-again-button');
     const imageContainer = document.getElementById('image-container');
     const progressBar = document.getElementById('progress-bar');
 
@@ -168,6 +177,7 @@ function initializeGame() {
 
     startButton.onclick = () => {
         startScreen.style.display = 'none';
+        playAgainButton.style.display = 'none';
         gameContainer.style.display = 'block';
         sessionLength = parseInt(sessionLengthSlider.value, 10);
         shuffleArray(wordList);
@@ -209,6 +219,7 @@ function initializeGame() {
             imageContainer.innerHTML = "";
             revealButton.style.display = "none";
             nextButton.style.display = "none";
+            playAgainButton.style.display = "inline-block";
             updateProgressBar();
         } else {
             showWord();
@@ -217,6 +228,11 @@ function initializeGame() {
 
     revealButton.onclick = revealPicture;
     nextButton.onclick = nextWord;
+    playAgainButton.onclick = () => {
+        document.querySelector('.game-container').style.display = 'none';
+        document.getElementById('start-screen').style.display = 'block';
+        playAgainButton.style.display = 'none';
+    };
 }
 
 function shuffleArray(array) {
